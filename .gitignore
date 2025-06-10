@@ -48,3 +48,9 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Password files
+.env*
+
+# OS specific files
+**/.DS_Store

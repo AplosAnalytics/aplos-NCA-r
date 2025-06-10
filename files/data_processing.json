@@ -1,0 +1,26 @@
+{
+    "data_cleaning": {
+        "rules": [
+            {
+                "profiles": [
+                    {
+                        "conditions": [],
+                        "grouping": [
+                            "subject"
+                        ]
+                    }
+                ],
+                "time_value": 0,
+                "type": "time_zero",
+                "columns": {
+                    "concentration": "conc",
+                    "time": "time"
+                },
+                "concentration_mapping": {
+                    "type": "fixed",
+                    "value": 0
+                }
+            }
+        ]
+    }
+}

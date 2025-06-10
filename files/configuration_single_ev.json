@@ -1,0 +1,91 @@
+{
+  "version": "2024-02-22",
+  "designations": {
+    "blq": {
+      "value": "BLQ"
+    },
+    "missing": {
+      "value": "NS"
+    },
+    "concentration_unit": {
+      "column": "conc.unit"
+    }
+  },
+  "columns": {
+    "time": "time",
+    "unique_id": "subject",
+    "concentration": {
+      "observed": "conc.obs",
+      "analyzed": "conc"
+    },
+    "sorting": [
+      "time"
+    ],
+    "grouping": [
+      "subject"
+    ],
+    "custom_columns": [
+      "sex"
+    ]
+  },
+  "dosing": {
+    "amount": {
+      "column": "Dose.amt"
+    },
+    "unit": {
+      "column": "Dose.unit"
+    },
+    "frequency": {
+      "value": "single"
+    },
+    "type": {
+      "value": "ev"
+    }
+  },
+  "time": {
+    "unit": {
+      "column": "time.unit"
+    },
+    "time_of_administration": {
+      "value": 0
+    },
+    "tau": {
+      "value": 24
+    },
+    "infusion": {
+      "protocol": {
+        "value": "rate"
+      },
+      "amount": {
+        "value": "1"
+      }
+    }
+  },
+  "kel_rules": {
+    "kel_method": 1,
+    "regression_statistic": "adj_r2",
+    "minimum_statistic": 0,
+    "maximum_extrapolation_linear": 0,
+    "maximum_extrapolation_logarithmic": 0,
+    "maximum_time_points": 0,
+    "minimum_span": 0,
+    "earliest_time_point": 0,
+    "tie": [
+      "kel_n",
+      "kel_lower"
+    ]
+  },
+  "partial_auc": [],
+  "sparse_data": false,
+  "exclusions": {
+    "column_name": "",
+    "exclusion_code": ""
+  },
+  "output": {
+    "maximum_precision": true,
+    "include_summary_plots": true,
+    "include_summary": true,
+    "include_individual_plots": true,
+    "include_technical_report": true
+  }
+}

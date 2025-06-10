@@ -1,0 +1,17 @@
+{
+    "description": "meta data is optional.  contains any json or string you'd like.  json will give you structure.  example below",
+    "reason": "sample analysis",
+    "execution-source":"R-code",
+    "team": [
+        {
+            "name": "john doe",
+            "title": "lead analyst",
+            "company": "little pharma"
+        },
+        {
+            "name": "jane doe",
+            "title": "consultant",
+            "company": "acme consulting"
+        }
+    ]
+}

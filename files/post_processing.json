@@ -1,0 +1,362 @@
+{
+  "custom_calculations":{
+    "output": {
+      "file_name": "pk-addl-params.csv",
+      "sort": [
+        "subject"
+      ]
+    },
+    "calculations": [
+      {
+        "unique_id": "subject",
+        "additional_columns": [],
+        "paramcd": "Cmax_2",
+        "parameter": "Cmax in g/L",
+        "units": "g/L",
+        "type": "conversion",
+        "operator": "/",
+        "term1": {
+          "conditions":[
+          ],
+          "paramcd":"Cmax"
+        },
+        "term2": {
+          "value": 1000
+        }
+      }
+    ]
+  },
+  "custom_tables": {
+    "tables": [
+      {
+        "source": "pk-listing-addl.csv",
+        "layout": {
+          "title": {
+            "display": true
+          },
+          "footer": {
+            "rows": [
+              {
+                "type": "NC",
+                "text": "**NC** = Not Calculated"
+              }
+            ],
+            "display": true
+          }
+        },
+        "stats": [
+          {
+            "name": "N",
+            "display": true
+          },
+          {
+            "name": "Mean",
+            "display": true
+          },
+          {
+            "name": "SD",
+            "display": true
+          },
+          {
+            "name": "Minimum",
+            "display": true,
+            "label": "Min"
+          },
+          {
+            "name": "Median",
+            "display": true,
+            "label": "Median"
+          },
+          {
+            "name": "Maximum",
+            "display": true,
+            "label": "Max"
+          },
+          {
+            "name": "GeometricMean",
+            "display": false,
+            "label": "Geometric Mean"
+          },
+          {
+            "name": "GeometricCVP",
+            "display": false,
+            "label": "Geometric CV%"
+          }
+        ],
+        "file_name": "individual_mean_parameters",
+        "columns": [
+          {
+            "name": "subject",
+            "type": "unique_id",
+            "label": "Subject Number"
+          },
+          {
+            "name": "paramcd",
+            "type": "pivot",
+            "display": false
+          },
+          {
+            "name": "value",
+            "type": "value",
+            "display": false
+          },
+          {
+            "name": "Cmax",
+            "label": "Cmax <br>({{units}})",
+            "type": "statistical",
+            "sigfig": 3
+          },
+          {
+            "name": "Cmax_2",
+            "label": "Cmax 2 <br>({{units}})",
+            "type": "statistical",
+            "sigfig": 3
+          },
+          {
+            "name": "Tmax",
+            "label": "Tmax <br>({{units}})",
+            "type": "statistical",
+            "sigfig": 3
+          },
+          {
+            "name": "AUC_all_lin",
+            "label": "AUC<sub>0-24</sub> <br>({{units}})",
+            "type": "statistical",
+            "sigfig": 3
+          }
+        ],
+        "groups": [
+          "sex"
+        ],
+        "styles": [
+          {
+            "border": {
+              "sides": "right",
+              "style": "solid",
+              "color": "#000000",
+              "size": "1px"
+            },
+            "columns": [
+              "subject"
+            ]
+          }
+        ],
+        "type": "individual_summary_pk_parameters",
+        "title": "Individual and Summary PK Parameters",
+        "conditions": [ 
+        ]
+      },
+      {
+        "layout": {
+          "title": {
+            "display": true
+          },
+          "footer": {
+            "rows": [
+              {
+                "type": "NC",
+                "text": "**NC** = Not Calculated"
+              },
+              {
+                "text": "Plasma LLOQ is 0.0100 ug/mL."
+              }
+            ],
+            "display": true
+          }
+        },
+        "stats": [
+          {
+            "name": "N",
+            "display": false
+          },
+          {
+            "name": "Mean",
+            "display": true
+          },
+          {
+            "name": "SD",
+            "display": true
+          },
+          {
+            "name": "Minimum",
+            "display": false,
+            "label": "Min"
+          },
+          {
+            "name": "Median",
+            "display": false,
+            "label": "Median"
+          },
+          {
+            "name": "Maximum",
+            "display": false,
+            "label": "Max"
+          },
+          {
+            "name": "GeometricMean",
+            "display": false,
+            "label": "Geometric Mean"
+          },
+          {
+            "name": "GeometricCVP",
+            "display": false,
+            "label": "Geometric CV%"
+          }
+        ],
+        "file_name": "concentrations",
+        "columns": [
+          {
+            "name": "subject",
+            "type": "unique_id",
+            "label": "Subject Number"
+          },
+          {
+            "name": "time",
+            "type": "pivot",
+            "display": false
+          },
+          {
+            "name": "conc",
+            "type": "value",
+            "display": false
+          },
+          {
+            "name": "0.0",
+            "label": "0",
+            "type": "statistical",
+            "sigfig": 3
+          },
+          {
+            "name": "0.5",
+            "label": "0.5",
+            "type": "statistical",
+            "sigfig": 3
+          },
+          {
+            "name": "1.0",
+            "label": "1",
+            "type": "statistical",
+            "sigfig": 3
+          },
+          {
+            "name": "1.5",
+            "label": "1.5",
+            "type": "statistical",
+            "decimals": 3
+          },
+          {
+            "name": "2.0",
+            "label": "2",
+            "type": "statistical",
+            "decimals": 3
+          },
+          {
+            "name": "4.0",
+            "label": "4",
+            "type": "statistical",
+            "decimals": 3
+          },
+          {
+            "name": "6.0",
+            "label": "6",
+            "type": "statistical",
+            "decimals": 3
+          },
+          {
+            "name": "8.0",
+            "label": "8",
+            "type": "statistical",
+            "decimals": 3
+          },
+          {
+            "name": "12.0",
+            "label": "12",
+            "type": "statistical",
+            "decimals": 3
+          },
+          {
+            "name": "16.0",
+            "label": "16",
+            "type": "statistical",
+            "decimals": 3
+          },
+          {
+            "name": "20.0",
+            "label": "20",
+            "type": "statistical",
+            "decimals": 3
+          },
+          {
+            "name": "24.0",
+            "label": "24",
+            "type": "statistical",
+            "decimals": 3
+          }
+        ],
+        "groups": [
+          "sex"
+        ],
+        "styles": [
+          {
+            "border": {
+              "sides": "right",
+              "style": "solid",
+              "color": "#000000",
+              "size": "1px"
+            },
+            "columns": [
+              "subject"
+            ]
+          }
+        ],
+        "source": "single_ev-cleaned.csv",
+        "type": "individual_summary_pk_parameters",
+        "title": "Individual and Summary Plasma Concentrations",
+        "conditions": [
+        ]
+      }
+    ]
+  },
+  "custom_plots": {
+    "plots": [
+      {
+        "source": "single_ev-cleaned.csv",
+        "y_axis_column_name": "conc",
+        "break_value": "4",
+        "type": "all_individual_semilog",
+        "concentration_units_column": "conc.unit",
+        "color_group_column_name": "subject",
+        "reference_value": "All Subjects",
+        "x_axis_label": "Nominal Time Postdose ({{value}})",
+        "color_group_label_name": "Subject Number",
+        "group_by": [
+          "subject",
+          "time"
+        ],
+        "theme": "default",
+        "x_axis_column_name": "time",
+        "conditions": [],
+        "time_units_column": "time.unit",
+        "y_axis_label": "Plasma Concentration ({{value}})"
+      }
+    ]
+  },
+  "custom_reports": {
+    "reports": [
+      {
+        "template": "template_v1.docx",
+        "author": "Aplos Analytics",
+        "blocks": [
+          "tables",
+          "plots"
+        ],
+        "name": "Custom Report",
+        "description": "A custom report generated by Aplos Analytics.",
+        "version": "1.0.0",
+        "actions": [
+          "auto_update"
+        ]
+      }
+    ]
+  }
+}
